@@ -32,7 +32,7 @@ namespace Density
 
             if(table.Rows.Count > 0)
             {
-                MessageBox.Show("Зашёл","jr", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Зашёл","Вход", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
