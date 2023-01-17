@@ -9,9 +9,14 @@ namespace Density
 {
     class Rashet
     {
-        
-      
-        
+
+
+
+        public static decimal ProductDensityByStandard3900(decimal labDensity, decimal labTemperature, decimal temperature)
+        {
+
+            return 0;
+        }
         public static decimal ProductDensityByStandard3900(IEnumerable<Standard3900Record> table, decimal labDensity, decimal labTemperature, decimal temperature)
         {
 
@@ -72,6 +77,48 @@ namespace Density
 
             return result;
         }
+
+
+        public static decimal? RefreshVolume()
+        {
+            decimal volume = decimal.Parse("1291,43000");
+            decimal coefficient = decimal.Parse("0,00125");
+            decimal temperature = decimal.Parse("94,6");
+            var t = volume *
+                             (1 +
+                                  (2 * coefficient + coefficient
+                                  ) *
+                                     (
+                                      temperature - 20
+                                     )
+                              );
+
+            return t;
+
+        }
+
+
+        //public decimal? RefreshVolume(Tank tank, decimal? height, decimal? temperature, MaterialType type, out bool volumeEnabled)
+        //{
+        //    CalibrationRecord cr = null;
+        //    bool allow =
+        //        tank != null
+        //        && tank.TankExtension != null
+        //        && tank.TankExtension.CalibrationRecords != null
+        //        && height != null
+        //        && (cr = tank.TankExtension.CalibrationRecords.RecordGet(tank, height)) != null
+        //        && cr.Volume != null;
+
+        //    volumeEnabled = allow ? !cr.Locked : true;
+
+        //    return allow && temperature != null ?
+        //       ((decimal)cr.Volume *
+        //       (1 + (2 * tank.MaterialType.Coefficient + (type == null ? 0 : type.Coefficient)) *
+        //       (temperature - 20))
+        //       //- (Tank.OutVolume == null || Tank.BarierHeight == null || Tank.BarierHeight > Height ? 0 : (decimal)Tank.OutVolume) //Убрали вычитание объема понтона
+        //       ) : 0;
+        //}
+
     }
 
 

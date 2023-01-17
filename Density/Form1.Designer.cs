@@ -39,15 +39,17 @@
             this.lblTemp = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLabDensity = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(3, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 27);
+            this.button1.Size = new System.Drawing.Size(197, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Расчет";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,6 +77,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblLabTemp, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtLabDensity, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -176,6 +179,17 @@
             this.txtLabDensity.Text = "768";
             this.txtLabDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(206, 122);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 27);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "sql расчёт";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +221,7 @@
         private System.Windows.Forms.Label lblTemp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLabDensity;
+        private System.Windows.Forms.Button button2;
     }
 }
 
